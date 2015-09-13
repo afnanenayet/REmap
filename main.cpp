@@ -12,6 +12,7 @@
 #include <string>
 #include <algorithm>
 #include "combogen.h"
+#include "plasmid.h"
 
 #define NEWLINE '\n' //makes it easier to visualize newlines
 #define lb << endl <<
@@ -20,6 +21,7 @@
 using namespace std;
 
 int main() {
+    plasmid primaryPlasmid = plasmid();
     string usrQuit = "n"; //lets the user type in a character and terminate data entry
     
     cout lb "This program allows you to figure out the position of restriction enzyme cuts in a bacterial plasmid based on the length of the remaining fragments";
@@ -27,7 +29,7 @@ int main() {
     cout lb "The key refers to the name of your enzyme, or just what you want to refer the entity that made the cuts as (e.g. EcoR1)";
     cout << NEWLINE;
     vector <vector <int> > vecData, cutData;
-    vector <vector <string> > multiName;
+    vector <vector <string> > multiName; //stores possible iteration of names
     vector <string> nameData; //stores names
     cout lb "Enter the restriction enzymes, enter q when done."; //getting names of enzymes
     for (int i = 1; usrQuit != "q" && usrQuit != "Q"; i++) {
