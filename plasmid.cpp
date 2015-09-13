@@ -13,7 +13,7 @@ using namespace std;
 plasmid::plasmid(std::vector<int>& fragmentLengths) {
     
     fragmentCount = int(fragLengths.size()); //TODO fix this
-    
+     
 }
 
 int plasmid::getTotalLength() {
