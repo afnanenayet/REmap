@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include <vector>
- 
+
 class plasmid {
     //instance variables
     int fragmentCount;
