@@ -16,10 +16,10 @@ class plasmid {
     //instance variables
     int fragmentCount;
     std::vector<int> cutSites;
-    std::vector<int>& fragLengths;
+    std::vector<int> fragLengths;
     
 public:
-    plasmid(std::vector<int>&);
+    plasmid(std::vector < std::vector<int>& >);
     void addCut(int mapLocation);
     std::vector<int> getFragmentLenghts();
     int getTotalLength();

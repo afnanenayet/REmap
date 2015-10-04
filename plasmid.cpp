@@ -10,18 +10,24 @@
 
 using namespace std;
 
-plasmid::plasmid(std::vector<int>& fragmentLengths) {
+plasmid::plasmid(std:: vector < std::vector<int>&  > fragmentLengths) {
     
     fragmentCount = int(fragLengths.size()); //TODO fix this
-     
+    fragLengths = fragmentLengths;
 }
 
 int plasmid::getTotalLength() {
-    for (auto i = 0; i < fragLengths.size(); i++) {
-        
+    int fragmentSum = 0;
+    
+    if (fragLengths.at(0)) {
+        for (auto i : fragLengths) {
+            fragmentSum += i;
+        }
+        return fragmentSum;
     }
     
-    
-    return 0; //TODO change to actual length
+    else {
+        return NULL; //if there are no initialized plasmid then there will be no length
+    }
 }
 

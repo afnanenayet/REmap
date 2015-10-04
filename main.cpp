@@ -21,7 +21,7 @@
 using namespace std;
 
 int main() {
-    plasmid primaryPlasmid = plasmid();
+    
     string usrQuit = "n"; //lets the user type in a character and terminate data entry
     
     cout lb "This program allows you to figure out the position of restriction enzyme cuts in a bacterial plasmid based on the length of the remaining fragments";
@@ -70,6 +70,9 @@ int main() {
         usrQuit = "n";
         vecData.push_back(temp_row);
     }
+    
+    plasmid::plasmid primaryPlasmid(vecData);
+    cout << "length: ", primaryPlasmid.getLength();
     
     cout << NEWLINE;
     cout << "Enter a key to terminate. ";
